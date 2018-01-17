@@ -61,6 +61,8 @@ class Controller < Sinatra::Base
     use OmniAuth::Builder do
       SiteConfig.providers.each do |code, p|
         case code
+        when 'gnusocial'
+          provider code.to_sym, p['client_id'], p['client_secret'], {server: p['server'], use_authorize: true} if p['client_id']
         when 'google_oauth2'
           provider code.to_sym, p['client_id'], p['client_secret'], {access_type: 'online', approval_prompt: '', scope: 'profile,userinfo.profile,plus.me'} if p['client_id']
         when 'github'

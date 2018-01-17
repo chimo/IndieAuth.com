@@ -22,6 +22,19 @@ class Provider
     nil
   end
 
+#  def self.provider_for_type(type)
+#    if Provider.types.include? type
+#      return type
+#    end
+#
+#    nil
+#  end
+#
+#  def self.types
+#    [
+#      'gnusocial'
+#    ]
+
   def self.regexes
     {
       #'beeminder' => 'https?:\/\/(?:www\.)?beeminder\.com\/(.+)',
@@ -30,7 +43,8 @@ class Provider
       'github' => 'https?:\/\/(?:www\.)?github\.com\/([^\/]+)',
       #'google_oauth2' => 'https?:\/\/(?:www\.)?(?:profiles\.|plus\.|)google\.com\/([^\/]+)',
       #'lastfm' => 'https?:\/\/(?:www\.)?last\.fm\/user\/(.+)',
-      'twitter' => 'https?:\/\/(?:www\.)?twitter\.com\/([^\/]+)'
+      'twitter' => 'https?:\/\/(?:www\.)?twitter\.com\/([^\/]+)',
+      'gnusocial' => 'https?:\/\/(?:www\.)?sn\.chromic\.org\/([^\/]+)'
     }
   end
 

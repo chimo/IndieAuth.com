@@ -3,6 +3,8 @@ module OmniAuth
     case provider_name
     when nil
       exists = false
+    when 'gnusocial'
+      exists = class_exists?('GNUsocial')
     when 'beeminder'
       exists = class_exists?('Beeminder')
     when 'eventbrite'

@@ -25,6 +25,8 @@ gem 'omniauth-lastfm'
 gem 'omniauth-eventbrite'
 gem 'omniauth-beeminder', :git => 'https://github.com/aaronpk/omniauth-beeminder'
 
+gem 'omniauth-gnusocial', :git => 'https://github.com/chimo/omniauth-gnusocial'
+
 gem 'ruby-openid'
 
 gem 'mechanize'
