@@ -23,10 +23,10 @@ SiteConfig = RelMeAuth::SiteConfig.new YAML.load_file('config.yml')[ENV['RACK_EN
 
 R = Redis.new :host => SiteConfig.redis.host, :port => SiteConfig.redis.port
 
-Mailgun.configure do |config|
-  config.api_key = SiteConfig.mailgun.api_key
-  config.domain  = SiteConfig.mailgun.domain
-end
+#Mailgun.configure do |config|
+#  config.api_key = SiteConfig.mailgun.api_key
+#  config.domain  = SiteConfig.mailgun.domain
+#end
 
 class Controller < Sinatra::Base
   # before do
